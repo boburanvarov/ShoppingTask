@@ -1,0 +1,17 @@
+.categories{
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.categories::-webkit-scrollbar{
+    display: none;
+}
+
+.products{
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.delete-btn{
+    color: red;
+}
