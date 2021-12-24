@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: "http://api.mediastack.com/v1/news",
+  accessKey: "a952360c9a8a3cb225079855cee6c3a1"
 };
 
 /*

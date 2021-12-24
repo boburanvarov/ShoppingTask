@@ -19,10 +19,14 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+import { NzListModule } from 'ng-zorro-antd/list';
+
 import { ApiService } from './service/api.service';
-import { WelcomeComponent } from './pages/welcome/welcome.component';
-import { CategoryComponent } from './pages/category/category.component';
-import { ProductComponent } from './pages/product/product.component';
+import { CardsComponent } from './pages/cards/cards.component';
+import { NavbarComponent } from './pages/navbar/navbar.component';
+import { SearchService } from './service/search.service';
 
 
 registerLocaleData(en);
@@ -30,9 +34,8 @@ registerLocaleData(en);
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,
-    CategoryComponent,
-    ProductComponent
+    CardsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -49,10 +52,12 @@ registerLocaleData(en);
     NzTableModule,
     NzFormModule,
     NzSelectModule,
-    NzNotificationModule
+    NzNotificationModule,
+    NzCardModule,
+    NzPaginationModule,
     
   ],
-  providers: [ApiService, { provide: NZ_I18N, useValue: en_US }],
+  providers: [ApiService, SearchService, { provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
